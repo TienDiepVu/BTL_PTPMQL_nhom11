@@ -1,0 +1,68 @@
+@model IEnumerable<BTL.Models.NhaCungCap>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h1 class="text-center">Đối Tác Nhà Cung Cấp</h1>
+
+<table class="table">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">
+                STT
+            </th>
+            <th scope="col">
+                Mã NCC
+            </th>
+            <th scope="col">
+                Nhà Cung Cấp
+            </th>
+            <th scope="col">
+                Địa Chỉ
+            </th>
+            <th scope="col">
+                Số Điện Thoại
+            </th>
+            <th scope="col">
+                Thao Tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int stt = 1;
+        }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @stt
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNhaCungCap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNhaCungCap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SdtNhaCungCap)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.MaNhaCungCap"> Chỉnh sửa</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.MaNhaCungCap">Xóa</a>
+                </td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+
+</table>
+<p class="text-center">
+    <a class="btn btn-primary" asp-action="Create">Thêm NCC</a>
+</p>

@@ -1,0 +1,112 @@
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@model IEnumerable<BTL.Models.Thuoc>
+
+@{
+    ViewData["Title"] = "Thuốc";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h1 class="text-center">Thuốc</h1>
+
+<p class="text-center">
+    <a class="btn btn-primary" asp-action="Create">Thêm </a>
+    <a class="btn btn-success" asp-action="Download">Xuất File</a>
+</p>
+
+<table class="table">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">
+                ID
+            </th>
+            <th scope="col">
+                Tên Thuốc
+            </th>
+            <th scope="col">
+                Số Lượng
+            </th>
+            <th scope="col">
+                Giá Bán
+            </th>
+            <th scope="col">
+                Nhóm Thuốc
+            </th>
+            <th scope="col">
+                Nhà Cung Cấp
+            </th>
+            <th scope="col">
+                Công Dụng
+            </th>
+            <th scope="col">
+                Thao tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @Html.DisplayFor(modelItem => item.MaThuoc)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenThuoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NhomThuoc) 
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NhaCungCap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CongDung)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.MaThuoc"> Chỉnh sửa</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.MaThuoc">Xóa</a>
+                </td>
+            </tr>
+            
+        }
+    </tbody>
+
+</table>
+@using (Html.BeginForm("Index", "Thuoc", FormMethod.Get, new { id = "form1" }))
+{
+
+}
+<div class="row">
+    <div class="col-md-11">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new
+            {
+                page = page,
+                pageSzie = ViewBag.prize
+            }), new
+                 X.PagedList.Web.Common.PagedListRenderOptions
+   {
+       LiElementClasses = new string[] { "page-item" },
+       PageClasses = new
+        string[] { "page-link" }
+   })
+    </div>
+    <div class="col-md-1">
+        @Html.DropDownList("pageSize", null, new { @class = "form-select" })
+    </div>
+
+</div>
+<script src="http://code/jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#pageSize").change(function () {
+            $("#form1").submit();
+        });
+    });
+</script>

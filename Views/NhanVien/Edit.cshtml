@@ -1,0 +1,44 @@
+@model BTL.Models.NhanVien
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="text-center">Chỉnh sửa thông tin nhân viên</h1>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <form asp-action="Edit" class="form-edit" style="width: 500px;">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <input type="hidden" asp-for="MaNhanVien">
+        <div class="form-group mt-3">
+            <label asp-for="TenNhanVien" class="control-label">Họ và tên</label>
+            <input asp-for="TenNhanVien" class="form-control">
+            <span class="text-danger" asp-validation-for="TenNhanVien"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="ChucVu" class="control-label">Chức vụ</label>
+            <input asp-for="ChucVu" class="form-control">
+            <span class="text-danger" asp-validation-for="ChucVu"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="MucLuong" class="control-label">Mức Lương</label>
+            <input asp-for="MucLuong" class="form-control">
+            <span class="text-danger" asp-validation-for="MucLuong"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="SoDienThoai" class="control-label">Số điện thoại</label>
+            <input asp-for="SoDienThoai" class="form-control">
+            <span class="text-danger" asp-validation-for="SoDienThoai"></span>
+        </div>
+        <div class="form-group mt-3 d-flex justify-content-around">
+            <input type="submit" class="btn btn-primary" value="Lưu thông tin" style="width: 200px">
+            <a asp-action="Index" class="btn btn-secondary" style="width: 200px">Trở lại</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

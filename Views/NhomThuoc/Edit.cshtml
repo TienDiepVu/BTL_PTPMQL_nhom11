@@ -1,0 +1,31 @@
+@model BTL.Models.NhomThuoc
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-center">Nhóm Thuốc</h1>
+<div class="container d-flex justify-content-center align-items-center">
+    <form asp-action="Edit" class="form-edit" style="width: 500px;">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <input type="hidden" asp-for="MaNhomThuoc">
+        <div class="form-group mt-3">
+            <label asp-for="TenNhomThuoc" class="control-label">Tên Nhóm Thuốc</label>
+            <input asp-for="TenNhomThuoc" class="form-control">
+            <span class="text-danger" asp-validation-for="TenNhomThuoc"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="MoTa" class="control-label">Mô Tả</label>
+            <input asp-for="MoTa" class="form-control">
+            <span class="text-danger" asp-validation-for="MoTa"></span>
+        </div>
+        <div class="form-group mt-3 d-flex justify-content-around">
+            <input type="submit" class="btn btn-primary" value="Lưu thông tin" style="width: 200px">
+            <a asp-action="Index" class="btn btn-secondary" style="width: 200px">Trở lại</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

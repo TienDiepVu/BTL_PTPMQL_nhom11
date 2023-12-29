@@ -1,0 +1,51 @@
+@model BTL.Models.NhomThuoc
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-center">Xóa Nhà Cung Cấp này?</h1>
+<div class="container d-flex justify-content-center">
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaNhomThuoc">
+        <table>
+            <tr>
+                <th >
+                    Nhóm Thuốc
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.TenNhomThuoc)
+                </td>
+            </tr>
+            <tr>
+                <th >
+                    Mô Tả
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.MoTa)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text-center">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-secondary" asp-action="Index">Trở lại</a>
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</div>
+<style>
+    th, .mkcl {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+    .btn {
+        margin: 10px;
+        width: 150px;
+    }
+</style>

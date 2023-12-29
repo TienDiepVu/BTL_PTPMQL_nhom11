@@ -1,0 +1,72 @@
+@model BTL.Models.NhanVien
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h1 class="text-center">Xóa Nhân Sự này?</h1>
+<div class="container d-flex justify-content-center">
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaNhanVien">
+        <table>
+            <tr>
+                <th >
+                    Tên Nhân Viên
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.TenNhanVien)
+                </td>
+            </tr>
+
+            <tr>
+                <th >
+                    Chức Vụ
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.ChucVu)
+                </td>
+            </tr>
+
+            <tr>
+                <th >
+                    Mức Lương
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.MucLuong)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Số Điện Thoại
+                </th>
+                <td class="mkcl">
+                    @Html.DisplayFor(model => model.SoDienThoai)
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-secondary" asp-action="Index">Trở lại</a>
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</div>
+
+<style>
+    th, .mkcl {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+    .btn {
+        margin: 10px;
+        width: 150px;
+    }
+</style>

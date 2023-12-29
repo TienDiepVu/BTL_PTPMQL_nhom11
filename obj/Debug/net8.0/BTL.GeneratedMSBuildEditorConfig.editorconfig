@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BTL
+build_property.RootNamespace = BTL
+build_property.ProjectDir = D:\HUMGedu\PTPMQL\BTL\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\HUMGedu\PTPMQL\BTL
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhaCungCap/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhaCungCap/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhaCungCap/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhaCungCap/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhanVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhanVien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhanVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhanVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhomThuoc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVRodW9jXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhomThuoc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVRodW9jXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhomThuoc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVRodW9jXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/NhomThuoc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVRodW9jXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Shared/_LayoutHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Thuoc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Thuoc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Thuoc/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Thuoc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Thuoc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b2NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUMGedu/PTPMQL/BTL/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-r300d95vn0

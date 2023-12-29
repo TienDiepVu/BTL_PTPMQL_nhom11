@@ -1,0 +1,63 @@
+@model IEnumerable<BTL.Models.NhomThuoc>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h1 class="text-center">Nhóm Thuốc</h1>
+
+
+<table class="table">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">
+                STT
+            </th>
+            <th scope="col">
+                Mã Nhóm Thuốc
+            </th>
+            <th scope="col">
+                Nhóm Thuốc
+            </th>
+            <th scope="col">
+                Mô Tả
+            </th>
+            <th scope="col">
+                Thao Tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int stt = 1;
+        }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @stt
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNhomThuoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNhomThuoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.MaNhomThuoc"> Chỉnh sửa</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.MaNhomThuoc">Xóa</a>
+                </td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+
+</table>
+<p class="text-center">
+    <a class="btn btn-primary" asp-action="Create">Thêm </a>
+</p>

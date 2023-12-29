@@ -1,0 +1,37 @@
+@model BTL.Models.NhomThuoc
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">Thêm Nhóm Thuốc</h1>
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <form asp-action="Create" style="width: 650px;">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-group mt-3">
+                <label asp-for="MaNhomThuoc" class="control-label">Mã Nhóm Thuốc</label>
+                <input asp-for="MaNhomThuoc" class="form-control">
+                <span class="text-danger" asp-validation-for="MaNhomThuoc"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="TenNhomThuoc" class="control-label">Tên Nhóm Thuốc</label>
+                <input asp-for="TenNhomThuoc" class="form-control">
+                <span class="text-danger" asp-validation-for="TenNhomThuoc"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="MoTa" class="control-label">Mô Tả</label>
+                <input asp-for="MoTa" class="form-control">
+                <span class="text-danger" asp-validation-for="MoTa"></span>
+            </div>
+            <div class="form-group mt-3 d-flex justify-content-around">
+                <input type="submit" class="btn btn-primary" value="Lưu thông tin" style="width: 200px">
+                <a asp-action="Index" class="btn btn-secondary" style="width: 200px">Trở lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

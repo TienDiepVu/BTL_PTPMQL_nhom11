@@ -1,0 +1,87 @@
+@model BTL.Models.Thuoc
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h1 class="text-center">Thêm Thuốc</h1>
+
+<div class="container d-flex justify-content-center">
+    <form asp-action="Upload" enctype="multipart/form-data" style="width: 650px;">
+        <div class="mt-3 form-control text-center">
+            <label>Nhập từ file: </label>
+            <input type="file" name="file" class="col-6">
+            <input type="submit" value="Tải lên" class="btn btn-primary ">
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <form asp-action="Create" style="width: 650px;">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="row">
+                <div class="col form-group mt-3">
+                    <label asp-for="MaThuoc" class="control-label">Mã Thuốc</label>
+                    <input asp-for="MaThuoc" class="form-control">
+                    <span class="text-danger" asp-validation-for="MaThuoc"></span>
+                </div>
+                <div class="col form-group mt-3">
+                    <label asp-for="TenThuoc" class="control-label">Tên Thuốc</label>
+                    <input asp-for="TenThuoc" class="form-control">
+                    <span class="text-danger" asp-validation-for="TenThuoc"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group mt-3">
+                    <label asp-for="SoLuong" class="control-label">Số Lượng</label>
+                    <input asp-for="SoLuong" class="form-control">
+                    <span class="text-danger" asp-validation-for="SoLuong"></span>
+                </div>
+                <div class="col form-group mt-3">
+                    <label asp-for="GiaBan" class="control-label">Giá Bán</label>
+                    <input asp-for="GiaBan" class="form-control">
+                    <span class="text-danger" asp-validation-for="GiaBan"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group mt-3">
+                    <label asp-for="NhomThuoc" class="control-label">Nhóm Thuốc</label>
+                    <select asp-for="NhomThuoc" class="form-control">
+                        <option value="">-- Chon Nhom Thuoc --</option>
+                        @foreach (var ncc in ViewBag.NhomThuoc)
+                        {
+                            <option value="@ncc.MaNhomThuoc">@ncc.TenNhomThuoc</option>
+                        }
+                    </select>
+                </div>
+                <div class="col form-group mt-3">
+                    <label asp-for="NhaCungCap" class="control-label">Nhà Cung Cấp</label>
+                    <select asp-for="NhaCungCap" class="form-control">
+                        <option value="">-- Chon NCC --</option>
+                        @foreach (var ncc in ViewBag.NhaCungCap)
+                        {
+                            <option value="@ncc.MaNhaCungCap">@ncc.TenNhaCungCap</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="CongDung" class="control-label">Công Dụng</label>
+                <input asp-for="CongDung" class="form-control">
+                <span class="text-danger" asp-validation-for="CongDung"></span>
+            </div>
+            <div class="form-group mt-3 d-flex justify-content-around">
+                <input type="submit" class="btn btn-primary" value="Lưu thông tin" style="width: 200px">
+                <a asp-action="Index" class="btn btn-secondary" style="width: 200px">Trở lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
